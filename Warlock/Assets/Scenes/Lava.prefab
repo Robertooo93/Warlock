@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 23768856829069188}
   - component: {fileID: 65783625192957284}
   - component: {fileID: 114043584255775940}
+  - component: {fileID: 114643359245227764}
+  - component: {fileID: 65426704558851556}
   m_Layer: 0
   m_Name: Lava
   m_TagString: Untagged
@@ -85,6 +87,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1271306174178070}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65426704558851556
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1271306174178070}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65783625192957284
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -108,3 +122,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0658f32c85f7a4bce99025e4b13f8e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114643359245227764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1271306174178070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5b37a5c0f7c7426cbb9466f79ba007a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  maxInvokeNumber: 10
