@@ -19,7 +19,7 @@ namespace UnityStandardAssets.CrossPlatformInput
         public void SetDownState()
         {
             CrossPlatformInputManager.SetButtonDown(Name);
-            Debug.Log("aaaaaaaaaaaaaaaaaaaaaaa");
+            Debug.Log("player.transform.position"+ player.transform.position);
             GameObject fireBall = Instantiate(prefab) as GameObject;
             fireBall.transform.position = player.transform.position + offset;
             Rigidbody rb = fireBall.GetComponent<Rigidbody>();

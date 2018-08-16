@@ -12,9 +12,9 @@ public class DestroyFireBall : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log("Start: "+ startPos);
-        Debug.Log("Current: " + transform.position);
-        Debug.Log("Distance: " + Vector3.Distance(startPos, transform.position));
+        //Debug.Log("Start: "+ startPos);
+        //Debug.Log("Current: " + transform.position);
+        //Debug.Log("Distance: " + Vector3.Distance(startPos, transform.position));
         if(Vector3.Distance(startPos,transform.position)>10f) {
             Destroy(this.gameObject);
         }
