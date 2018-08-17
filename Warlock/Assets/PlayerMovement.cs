@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour {
         inputs = Vector3.zero;
         inputs.x = CrossPlatformInputManager.GetAxis("Horizontal");
         inputs.z = CrossPlatformInputManager.GetAxis("Vertical");
-        Debug.Log(inputs);
+        //Debug.Log(inputs);
         transform.Rotate(0, inputs.x, 0);
         if(inputs.z > 0) {
             Debug.Log("Move forward");
