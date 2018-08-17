@@ -19,14 +19,7 @@ public class PlayerMovement : MonoBehaviour {
         inputs = Vector3.zero;
         inputs.x = CrossPlatformInputManager.GetAxis("Horizontal");
         inputs.z = CrossPlatformInputManager.GetAxis("Vertical");
-        //Debug.Log(inputs);
-        transform.Rotate(0, inputs.x, 0);
-        if(inputs.z > 0) {
-            Debug.Log("Move forward");
-        }
-        else if(inputs.z < 0) {
-            Debug.Log("Move backward");
-        }
-        rb.MovePosition(rb.position + inputs * speed * Time.fixedDeltaTime);
+        transform.rotation = Quaternion.LookRotation(Vector3.RotateTowards(transform.forward,new Vector3(inputs.x,0,inputs.z),speed,0.0f));
+        rb.MovePosition(rb.position + new Vector3(inputs.x,0,inputs.z) * speed * Time.fixedDeltaTime);
 	}
 }
